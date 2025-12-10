@@ -1,0 +1,396 @@
+<html lang="en">
+<head>
+    
+
+    <link rel="shortcut icon" href="images/bookIMG.png"><!--logoy bashy sarawa-->
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css "> <!--File CSS-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><!--Font-->
+   
+    
+</head>
+<body>
+
+
+
+    <header>   <!--stared of menu-->
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>T</span>ravel</a>
+
+        <div class="navbar">
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#contact">contact</a>
+        </div>
+    </header>   <!--end of menu-->
+  
+  
+  
+    <section class="home" id="home">   <!--start of home-->
+
+        <div class="contact">  
+            
+            <h3>adventure is worthwhile</h3> 
+            <p>Discover New Places with Us, Adventure Awaits</p>
+            <a href="discover.html" class="btn">discover more</a> <!--dutton'y sar video-->
+          
+        </div>
+        
+        
+
+        <div class="video-container">
+            <video src="video/main.mp4" id="video-slider" loop muted autoplay></video>  <!--Main video-->
+        </div>
+    
+       
+    </section>     <!--end of home-->  
+
+
+
+    <section class="book" id="book">     <!--start of book--> 
+        <h1 class="heading">
+
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+
+        </h1>
+        <div class="row">
+
+            <div class="image">
+                <img src="images/bookIMG.png" alt=""> <!--image'y BookNow-->
+
+            </div>
+            <form id="bookingForm">
+                <div class="inputbox">
+                    <h3>Where to</h3>
+                    <input type="text"  placeholder="Place name" id="name" required>
+                </div>
+                <div class="inputbox">
+                    <h3>How many</h3>
+                    <input type="number" placeholder="Number of guests" required>
+                </div>
+                <div class="inputbox">
+                    <h3>Arrivals</h3>
+                    <input type="date" required>
+                </div>
+                <div class="inputbox">
+                    <h3>Leaving</h3>
+                    <input type="date" required>
+                </div>
+                <input type="submit" class="btn" value="Book Now">
+            </form>
+            
+            <div class="popup-overlay" id="popupOverlay"></div>
+            <div class="popup" id="popup">
+                <img src="images/submit.png" alt="Submission Success">
+                <h2>Thank You!</h2>
+                <p>Your details have been successfully submitted. Thanks!</p>
+                <button type="button" class="btn" onclick="closePopup()">Ok</button>
+            </div>
+            
+
+        </div>
+    </section>    <!--end of book-->    
+    
+
+        
+
+
+    
+       
+   
+   <section class="packages" id="packages"> <!--start of packages--> 
+
+        <h1 class="heading">
+
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+
+        </h1>
+        <div class="box-container">
+          <div class="box"><!--post 1 -->
+            <img src="images/1.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Ahmad Awa</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+
+                <div class="price">$50</div>
+                <a href="#book" class="btn" onclick="autoFillForm()">book now</a>
+            </div>
+            
+         </div>
+         <script>
+            function autoFillForm() { /*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+              
+              var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+              var sha = document.getElementById("name");
+              form.elements["name"].value = "Ahmad Awa";/*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+              sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+            }
+            </script>
+
+         <div class="box"><!--post 2 -->
+            <img src="images/korak.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>korak</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+                <div class="price">$50</div>
+                <a href="#book" class="btn" onclick="autoFillForm2()">book now</a>
+            </div>
+            <script>
+                function autoFillForm2() {/*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+                 
+                  var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+                  var sha = document.getElementById("name");
+                  form.elements["name"].value = "korak";/*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+                  sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+    
+                }
+                </script>
+
+         </div>
+         <div class="box"><!--post 3 -->
+            <img src="images/dukan.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>dukan</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+                <div class="price"><span>$50</span> 30$</div> 
+                <a href="#book" class="btn" onclick="autoFillForm3()">book now</a>
+  
+            </div>
+            <script>
+                function autoFillForm3() {/*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+                 
+                  var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+                  var sha = document.getElementById("name");
+                  form.elements["name"].value = "dukan";/*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+                  sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+                }
+                </script>
+
+         </div>
+         <div class="box"><!--post 4 -->
+            <img src="images/QaraDagh.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>Qara Dagh</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+                <div class="price"><span>$50</span> 25$</div> 
+                <a href="#book" class="btn" onclick="autoFillForm4()">book now</a>
+  
+            </div>
+            <script>
+                function auto\FillForm4() {/*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+                
+                  var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+                  var sha = document.getElementById("name");
+                  form.elements["name"].value = "Qara Dagh"; /*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+                  sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+                }
+                </script>
+
+         </div>
+         <div class="box"><!--post 5 -->
+            <img src="images/soran.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>soran</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+                <div class="price">$50</div>
+                <a href="#book" class="btn" onclick="autoFillForm5()">book now</a>
+  
+            </div>
+            <script>
+                function autoFillForm5() {/*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+                
+                  var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+                  var sha = document.getElementById("name");
+                  form.elements["name"].value = "Soran";/*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+                  sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+                }
+                </script>
+
+         </div>
+         <div class="box"><!--post 6 -->
+            <img src="images/biara.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i>biara</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore natus ipsum temporibus incidunt voluptas praesentium</p>
+                <div class="price">$50</div>
+                <a href="#book" class="btn" onclick="autoFillForm6()">book now</a>
+  
+            </div>
+            <script>
+                function autoFillForm6() {/*automatic'y la form'y BookNow Fild'y Name Prdakatawa*/
+                  
+                  var form = document.getElementById("bookingForm"); /*form'yBookNow ka ID'akay (bookingForm) bang krawa  */
+                  var sha = document.getElementById("name");
+                  form.elements["name"].value = "Biara";/*value naw inputy whereTo ka ID'akay name'a agoret bo aw naway boman danawa  */
+                  sha.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 1.5)";
+                }
+                </script>
+
+            
+         </div>
+
+
+        </div>
+
+   </section>  <!--end of packages-->   
+   
+
+
+
+
+
+   <section class="services" id="services">    <!--start of service-->  
+
+    <h1 class="heading">
+
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+
+    </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safety guide</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Local travel in Kurdistan</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bus"></i>
+            <h3>fastest travel</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat enim nemo amet aut possimus corporis ullam natus eveniet fug</p>
+        </div>
+
+    </div>
+
+   </section>  <!--end of service--> 
+ 
+   <section class="contact" id="contact"> <!--start of contact--> 
+
+        <h1 class="heading">
+
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/contact.jpg" alt=""><!--image'y Contact-->
+
+            </div>
+            <form action="" method="post">
+                <div class="inputbox">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="inputbox">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <textarea name="message" placeholder="Message" cols="30" rows="10" required></textarea>
+                <input type="submit" class="btn" value="Send Message">
+            </form>
+            
+
+        </div>
+
+   </section> <!--end of contact--> 
+    
+
+      <section class="footer"><!--start of footer--> 
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laboriosam laborum
+                     corrupti maxime reiciendis laudantium sint asperiores, blanditiis a provident.</p>
+            </div>
+            <div class="box">
+                <h3>branch location</h3>
+                <a href="#">slemany</a>
+                <a href="#">hawler</a>
+                <a href="#">halabja</a>
+                <a href="#">dhok</a>
+                <a href="#">zaxo</a>
+                <a href="#">soran</a>
+
+            </div>
+            <div class="box">
+                <h3>links</h3>
+                <a href="#home">home</a>
+                <a href="#book">book</a>
+                <a href="#packages">packages</a>
+                <a href="#services">services</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">x</a>
+                
+            </div>
+
+        </div>
+        <h1 class="credit"> created by <span>Mir Mohammed</span> , <span>Paiwand Ali</span> , <span>Sahand erfan</span></h1>
+
+      </section> <!--end of footer--> 
+
+   
+
+
+      <script src="script.js" type="text/javascript"></script><!--File JavaScript--> 
+      
+    
+</body>
+</html>
